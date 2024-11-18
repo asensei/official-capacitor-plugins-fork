@@ -7,22 +7,22 @@ let package = Package(
     products: [
         .library(
             name: "CapacitorFilesystem",
-            targets: ["FilesystemPlugin"])
+            targets: ["CapacitorFilesystem"])
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "main")
     ],
     targets: [
         .target(
-            name: "FilesystemPlugin",
+            name: "CapacitorFilesystem",
             dependencies: [
                 .product(name: "Capacitor", package: "capacitor-swift-pm"),
                 .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
             path: "filesystem/ios/Sources/FilesystemPlugin"),
         .testTarget(
-            name: "FilesystemPluginTests",
-            dependencies: ["FilesystemPlugin"],
+            name: "CapacitorFilesystemTests",
+            dependencies: ["CapacitorFilesystem"],
             path: "filesystem/ios/Tests/FilesystemPluginTests")
     ]
 )
