@@ -7,10 +7,11 @@ let package = Package(
     products: [
         .library(
             name: "CapacitorFilesystem",
+            type: .dynamic,
             targets: ["CapacitorFilesystem"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "main")
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm", .upToNextMajor(from: "6.0.0"))
     ],
     targets: [
         .target(
